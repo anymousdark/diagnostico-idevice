@@ -1,0 +1,43 @@
+﻿CONTRATO DE LICENÇA DE UTILIZAÇÃO DE SOFTWARE
+Diagnóstico iDevice, versão 1.2.3
+Titular: anymousdark
+
+1. Objeto. O presente contrato regula a utilização da aplicação
+   Diagnóstico iDevice, destinada ao diagnóstico e recuperação de
+   aparelhos iPhone ligados por USB.
+
+2. Licença. O titular concede ao utilizador uma licença pessoal,
+   intransmissível e gratuita para instalar e utilizar a aplicação
+   em equipamentos próprios, incluindo as cópias estritamente
+   necessárias à sua utilização.
+
+3. Utilização autorizada. A aplicação destina-se a funções de
+   diagnóstico, leitura de informação do aparelho e gestão de
+   firmware assinado pela Apple, nos termos da documentação.
+   A página Offline funciona sem acesso à internet; a página
+   Online contacta apenas serviços públicos.
+
+4. Restrições. Sem autorização prévia e escrita do titular, o
+   utilizador não pode ceder, sublicenciar, descompilar ou tentar
+   extrair o código-fonte da aplicação, nem remover os avisos de
+   autoria e propriedade nela contidos.
+
+5. Componentes de terceiros. A aplicação integra ferramentas do
+   projeto libimobiledevice e respetivas bibliotecas, regidas
+   pelas suas próprias licenças — ver THIRD-PARTY-NOTICES.md.
+
+6. Atualizações. O titular pode disponibilizar atualizações que
+   substituem ou complementam a presente versão, regidas por este
+   contrato, salvo indicação em contrário.
+
+7. Suporte. Em caso de erro, o utilizador pode gerar um ficheiro
+   de diagnóstico através do botão «Exportar logs» e remetê-lo
+   ao titular para análise.
+
+8. Vigência e cessação. Este contrato vigora por tempo
+   indeterminado e pode ser resolvido a qualquer momento pelo
+   utilizador, desinstalando a aplicação e eliminando as cópias.
+
+9. Disposições finais. A invalidade de qualquer cláusula não afeta
+   a validade das restantes. A utilização da aplicação implica a
+   aceitação integral do presente contrato.
