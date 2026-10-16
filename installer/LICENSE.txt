@@ -1,5 +1,5 @@
 ﻿CONTRATO DE LICENÇA DE UTILIZAÇÃO DE SOFTWARE
-Diagnóstico iDevice, versão 1.2.6
+Diagnóstico iDevice, versão 1.2.7
 Titular: anymousdark
 
 1. Objeto. O presente contrato regula a utilização da aplicação
