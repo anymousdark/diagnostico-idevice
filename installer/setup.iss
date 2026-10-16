@@ -3,7 +3,7 @@
 ;  Compilar:  ISCC.exe installer\setup.iss
 ; ============================================================
 #define MyAppName "Diagnóstico iDevice"
-#define MyAppVersion "1.2.5"
+#define MyAppVersion "1.2.6"
 #define MyAppPublisher "anymousdark"
 #define MyAppExeName "OfflineDeviceDiagnostics.exe"
 
@@ -42,7 +42,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Files]
-Source: "..\releases\1.2.5\OfflineDeviceDiagnostics.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\releases\1.2.6\OfflineDeviceDiagnostics.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\tools\*"; DestDir: "{app}\tools"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 
