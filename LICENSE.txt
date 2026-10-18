@@ -1,10 +1,11 @@
 ﻿CONTRATO DE LICENÇA DE UTILIZAÇÃO DE SOFTWARE
-Diagnóstico iDevice, versão 1.3.0
-Titular: anymousdark
+
+FDR_SYSTEM, versão 1.4.6
+Autor e titular: anymousdark
 
 1. Objeto. O presente contrato regula a utilização da aplicação
-   Diagnóstico iDevice, destinada ao diagnóstico e recuperação de
-   aparelhos iPhone ligados por USB.
+   FDR_SYSTEM, destinada ao diagnóstico e recuperação de aparelhos
+   iPhone ligados por USB.
 
 2. Licença. O titular concede ao utilizador uma licença pessoal,
    intransmissível e gratuita para instalar e utilizar a aplicação
@@ -12,10 +13,10 @@ Titular: anymousdark
    necessárias à sua utilização.
 
 3. Utilização autorizada. A aplicação destina-se a funções de
-   diagnóstico, leitura de informação do aparelho e gestão de
-   firmware assinado pela Apple, nos termos da documentação.
-   A página Offline funciona sem acesso à internet; a página
-   Online contacta apenas serviços públicos.
+   diagnóstico, leitura de informação do aparelho, gestão de
+   firmware assinado pela Apple e às restantes funções descritas
+   na documentação. A página Offline funciona sem acesso à
+   internet; a página Online contacta apenas serviços públicos.
 
 4. Restrições. Sem autorização prévia e escrita do titular, o
    utilizador não pode ceder, sublicenciar, descompilar ou tentar
@@ -23,8 +24,11 @@ Titular: anymousdark
    autoria e propriedade nela contidos.
 
 5. Componentes de terceiros. A aplicação integra ferramentas do
-   projeto libimobiledevice e respetivas bibliotecas, regidas
-   pelas suas próprias licenças — ver THIRD-PARTY-NOTICES.md.
+   projeto libimobiledevice, drivers USB e uma ferramenta opcional
+   de jailbreak, regidas pelas suas próprias licenças — ver
+   THIRD-PARTY-NOTICES.md. A ferramenta de jailbreak é um recurso
+   opcional, usado por conta e risco do utilizador e apenas em
+   aparelhos próprios ou autorizados.
 
 6. Atualizações. O titular pode disponibilizar atualizações que
    substituem ou complementam a presente versão, regidas por este
@@ -41,3 +45,5 @@ Titular: anymousdark
 9. Disposições finais. A invalidade de qualquer cláusula não afeta
    a validade das restantes. A utilização da aplicação implica a
    aceitação integral do presente contrato.
+
+© 2026 anymousdark. Todos os direitos reservados.
