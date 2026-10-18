@@ -13,7 +13,7 @@ Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado po
 | **Firmware** | Sim | Catálogo de **todos** os iPhones com todas as versões (assinadas e expiradas) prontas a descarregar |
 | **Acessibilidade** | Não | Fotos e ficheiros como no 3uTools: navegar, importar/exportar, exportar todas as fotos (DCIM) e captura do ecrã do iPhone |
 
-A deteção do aparelho é automática. Em caso de erro, o botão **Exportar logs** gera um ficheiro de diagnóstico pronto a enviar ao suporte. Há ainda uma **janela de registo em direto** (ecrã preto tipo consola) que mostra tudo o que a aplicação está a fazer.
+A deteção do aparelho é automática e, com **Ler automaticamente** ligado (opção por omissão), a aplicação lê sozinha assim que liga o iPhone. Em caso de erro, o botão **Exportar logs** gera um ficheiro de diagnóstico pronto a enviar ao suporte. Há ainda **janelas de registo em direto** (ecrã preto tipo consola), uma por função, que mostram tudo o que a aplicação está a fazer e fecham sozinhas após a operação terminar.
 
 ## Requisitos
 
@@ -28,6 +28,8 @@ A deteção do aparelho é automática. Em caso de erro, o botão **Exportar log
 3. Para desinstalar, use **Adicionar/Remover Programas**.
 
 Quem preferir a versão portátil pode usar o ZIP `OfflineDeviceDiagnostics-<versão>-win-x64.zip` (extrair tudo e executar).
+
+A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, na barra inferior).
 
 ## Notas
 
