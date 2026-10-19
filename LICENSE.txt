@@ -1,6 +1,6 @@
 ﻿CONTRATO DE LICENÇA DE UTILIZAÇÃO DE SOFTWARE
 
-FDR_SYSTEM, versão 1.4.8
+FDR_SYSTEM, versão 1.4.9
 Autor e titular: anymousdark
 
 1. Objeto. O presente contrato regula a utilização da aplicação
