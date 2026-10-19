@@ -1,6 +1,6 @@
 # FDR_SYSTEM
 
-Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.5.0**, autor **anymousdark**.
+Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.5.1**, autor **anymousdark**.
 
 ## O que faz
 
@@ -13,7 +13,7 @@ Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado po
 | **Diagnóstico** | Não | Registo do iOS **em direto** (começar/parar, filtrar e guardar); recolha de **crash logs e panics** para ZIP; validação ou reparação do **emparelhamento**; lista de **perfis de aprovisionamento** — tudo local e só de leitura ou com pedido explícito |
 | **Firmware** | Sim | Catálogo de **todos** os iPhones com todas as versões (assinadas e expiradas); lista os downloads em curso e os ficheiros já guardados em `Documentos\iDevice-Firmware` |
 | **Acessibilidade** | Não | Fotos e ficheiros como no 3uTools: navegar, importar/exportar, exportar todas as fotos (DCIM) e captura do ecrã do iPhone |
-| **Driver** | Não | Instala com um clique os drivers USB que acompanham a aplicação — **Apple (usbaapl64)**, **DFU (libusbK)** e **UsbDk 1.0.22** — com progresso visível e confirmação no fim |
+| **Driver** | Não | Instala com um clique os drivers USB que acompanham a aplicação — **Apple (usbaapl64)**, **DFU (Apple oficial, WHQL 538.0.0.0)** e **UsbDk 1.0.22** — com progresso visível e confirmação no fim |
 | **Jailbreak** (opcional) | Não | Página própria para a ferramenta **WinRa1n** (checkm8 + checkra1n + palera1n), incluída na aplicação — para iPhones do 5s ao X (chips A7 a A11), iOS 12 a 17 |
 
 \* A página Offline só usa a rede para o aviso de iOS mais recente; a leitura do aparelho e a ficha técnica são offline.
@@ -32,11 +32,11 @@ O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro
 
 ## Instalação
 
-1. Descarregue **`FDR_SYSTEM-1.5.0-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
+1. Descarregue **`FDR_SYSTEM-1.5.1-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
 2. Execute e siga o assistente (licença, pasta, Menu Iniciar, ícone no ambiente de trabalho). Não precisa de administrador.
 3. Para desinstalar, use **Adicionar/Remover Programas**: a desinstalação remove tudo o que a aplicação criou (pastas, ícones, chaves de registo e cache) — os firmwares que descarregou para `Documentos\iDevice-Firmware` ficam guardados, porque são seus.
 
-Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.5.0-win-x64.zip` (extrair tudo e executar).
+Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.5.1-win-x64.zip` (extrair tudo e executar).
 
 A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, na barra inferior) — ela fecha, instala e **volta a abrir sozinha**.
 
