@@ -1,6 +1,6 @@
 # FDR_SYSTEM
 
-Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.4.7**, autor **anymousdark**.
+Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.4.8**, autor **anymousdark**.
 
 ## O que faz
 
@@ -27,11 +27,11 @@ O botão **Tema**, no topo, troca entre tema **claro** e **escuro** — a escolh
 
 ## Instalação
 
-1. Descarregue **`FDR_SYSTEM-1.4.7-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
+1. Descarregue **`FDR_SYSTEM-1.4.8-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
 2. Execute e siga o assistente (licença, pasta, Menu Iniciar, ícone no ambiente de trabalho). Não precisa de administrador.
 3. Para desinstalar, use **Adicionar/Remover Programas**: a desinstalação remove tudo o que a aplicação criou (pastas, ícones, chaves de registo e cache) — os firmwares que descarregou para `Documentos\iDevice-Firmware` ficam guardados, porque são seus.
 
-Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.4.7-win-x64.zip` (extrair tudo e executar).
+Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.4.8-win-x64.zip` (extrair tudo e executar).
 
 A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, na barra inferior) — ela fecha, instala e **volta a abrir sozinha**.
 
