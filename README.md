@@ -20,7 +20,7 @@ Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado po
 
 A deteção do aparelho é automática e, com **Ler automaticamente** ligado (opção por omissão), a aplicação lê sozinha assim que liga o iPhone. O registo da aplicação fica **só no ficheiro de logs**; na página **Diagnóstico** pode ver o registo do próprio iPhone em direto. O botão **Exportar logs** gera um ficheiro de diagnóstico pronto a enviar ao suporte.
 
-A janela abre **maximizada à área de trabalho** (sem a margem de 7 px que o modo maximizado deixava) e a barra de estado fica integrada no topo, deixando mais espaço para o conteúdo. A tabela de **Firmware** usa botões de download compactos, com ícone e contorno, em vez de blocos verdes em cada linha. A página **Reparo** tem scroll, para os cartões de ativação, MDM e dados de recovery/DFU ficarem todos acessíveis.
+A janela abre **maximizada à área de trabalho** (sem a margem de 7 px que o modo maximizado deixava) e a barra de estado fica integrada no topo, deixando mais espaço para o conteúdo. A tabela de **Firmware** usa botões de download compactos, com ícone e contorno, em vez de blocos verdes em cada linha. A página **Reparo** tem scroll, para os cartões de ativação e MDM ficarem acessíveis; o cartão de dados de recovery/DFU fica na coluna da direita, debaixo do aviso de DFU.
 
 O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro, Meia-noite, Floresta e Ametista — e a escolha fica guardada para as próximas aberturas.
 
