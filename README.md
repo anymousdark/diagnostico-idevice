@@ -1,6 +1,6 @@
 # FDR_SYSTEM
 
-Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.5.1**, autor **anymousdark**.
+Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.5.2**, autor **anymousdark**.
 
 ## O que faz
 
@@ -20,7 +20,7 @@ Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado po
 
 A deteção do aparelho é automática e, com **Ler automaticamente** ligado (opção por omissão), a aplicação lê sozinha assim que liga o iPhone. O registo da aplicação fica **só no ficheiro de logs**; na página **Diagnóstico** pode ver o registo do próprio iPhone em direto. O botão **Exportar logs** gera um ficheiro de diagnóstico pronto a enviar ao suporte.
 
-A janela abre **maximizada à área de trabalho** (sem a margem de 7 px que o modo maximizado deixava) e a barra de estado continua visível.
+A janela abre **maximizada à área de trabalho** (sem a margem de 7 px que o modo maximizado deixava) e a barra de estado fica integrada no topo, deixando mais espaço para o conteúdo.
 
 O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro, Meia-noite, Floresta e Ametista — e a escolha fica guardada para as próximas aberturas.
 
@@ -32,13 +32,13 @@ O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro
 
 ## Instalação
 
-1. Descarregue **`FDR_SYSTEM-1.5.1-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
+1. Descarregue **`FDR_SYSTEM-1.5.2-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
 2. Execute e siga o assistente (licença, pasta, Menu Iniciar, ícone no ambiente de trabalho). Não precisa de administrador.
 3. Para desinstalar, use **Adicionar/Remover Programas**: a desinstalação remove tudo o que a aplicação criou (pastas, ícones, chaves de registo e cache) — os firmwares que descarregou para `Documentos\iDevice-Firmware` ficam guardados, porque são seus.
 
-Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.5.1-win-x64.zip` (extrair tudo e executar).
+Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.5.2-win-x64.zip` (extrair tudo e executar).
 
-A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, na barra inferior) — ela fecha, instala e **volta a abrir sozinha**.
+A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, no topo) — ela fecha, instala e **volta a abrir sozinha**.
 
 ## Notas
 
