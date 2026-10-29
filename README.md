@@ -1,6 +1,8 @@
 # FDR_SYSTEM
 
-Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.5.6**, autor **anymousdark**.
+Aplicação para Windows que diagnostica e ajuda a recuperar um iPhone ligado por USB. Versão **1.5.9**, autor **anymousdark**.
+
+> **Novidades da 1.5.9:** updater com verificação SHA-256 do executável de origem, cópia de segurança e rollback; saúde da bateria com valor bruto e arredondado; leitura USB com consultas independentes em paralelo. Notas completas na [release 1.5.9](https://github.com/anymousdark/diagnostico-idevice/releases/tag/app-v1.5.9).
 
 ## O que faz
 
@@ -24,6 +26,14 @@ A janela abre **maximizada à área de trabalho** (sem a margem de 7 px que o mo
 
 O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro, Meia-noite, Floresta e Ametista — e a escolha fica guardada para as próximas aberturas.
 
+## Novidades da 1.5.9
+
+- **Updater mais seguro:** verificação SHA-256 do executável de origem, cópia de segurança `FDR_SYSTEM.exe.old`, rollback automático se a versão nova não arrancar em 15 segundos e fallback para o instalador completo.
+- **Bateria mais transparente:** valor bruto e arredondado, botão **Medir 3×** com mediana e limiar explícito (Boa ≥90%, Razoável ≥80%, Fraca <80%).
+- **Leitura mais rápida:** espaço, `AppleSmartBattery` e `com.apple.mobile.battery` são consultados em paralelo depois da leitura principal.
+- **Logs rodados:** ficheiros com mais de 14 dias são removidos no arranque.
+- **Firmware:** o catálogo continua a ser carregado apenas quando a página Firmware é aberta.
+
 ## Requisitos
 
 - Windows 10/11 de 64 bits.
@@ -32,13 +42,13 @@ O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro
 
 ## Instalação
 
-1. Descarregue **`FDR_SYSTEM-1.5.6-setup.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases).
+1. Descarregue **`FDR_SYSTEM-1.5.9-installer.exe`** na [página de releases](https://github.com/anymousdark/diagnostico-idevice/releases) para uma instalação nova ou reparação.
 2. Execute e siga o assistente (licença, pasta, Menu Iniciar, ícone no ambiente de trabalho). Não precisa de administrador.
 3. Para desinstalar, use **Adicionar/Remover Programas**: a desinstalação remove tudo o que a aplicação criou (pastas, ícones, chaves de registo e cache) — os firmwares que descarregou para `Documentos\iDevice-Firmware` ficam guardados, porque são seus.
 
-Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.5.6-win-x64.zip` (extrair tudo e executar).
+Quem já tem a **1.5.7 ou 1.5.8** pode usar o atualizador pequeno `FDR_SYSTEM-1.5.9-setup.exe`. Quem preferir a versão portátil pode usar o ZIP `FDR_SYSTEM-1.5.9-win-x64.zip` (extrair tudo e executar).
 
-A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, no topo) — ela fecha, instala e **volta a abrir sozinha**. Se o GitHub estiver indisponível ou limitar os pedidos, mostra um aviso em vez de dizer que já tem a versão mais recente.
+A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a atualização com um clique (botão **Atualizações**, no topo) — ela fecha, instala e **volta a abrir sozinha**. A 1.5.9 usa um patch delta de cerca de 6 MB, verifica o SHA-256 do executável de origem, guarda uma cópia de segurança e repõe a versão anterior se a nova não arrancar em 15 segundos. Se o patch falhar, usa o instalador completo. Se o GitHub estiver indisponível ou limitar os pedidos, mostra um aviso em vez de dizer que já tem a versão mais recente.
 
 ## Notas
 
