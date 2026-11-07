@@ -21,6 +21,13 @@ contornar iCloud, Activation Lock ou MDM:
 | **Linux 1.6.5** | [`linux-v1.6.5`](https://github.com/anymousdark/diagnostico-idevice/releases/tag/linux-v1.6.5) | `.deb` amd64, `.deb` arm64, AppImage x86_64, `SHA256SUMS` |
 | **Windows 1.5.9** | [`app-v1.5.9`](https://github.com/anymousdark/diagnostico-idevice/releases/tag/app-v1.5.9) | instalador, setup, ZIP, patches delta |
 
+## Documentação
+
+| Documento | Ligação |
+|---|---|
+| **Linux 1.6.5** | <https://fdr-system.vercel.app/linux> |
+| **Windows 1.5.9** | <https://fdr-system.vercel.app> |
+
 ---
 
 ## Linux 1.6.5
