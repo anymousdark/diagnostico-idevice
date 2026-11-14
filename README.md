@@ -8,7 +8,7 @@ contornar iCloud, Activation Lock ou MDM:
 | Plataforma | Versão | Interface | Pacotes |
 |---|---|---|---|
 | **Linux x64 / ARM64** | **1.6.5** | Avalonia 11.3 · .NET 8 | `.deb` · AppImage |
-| **Windows 10/11 x64** | **1.5.9** | WPF · .NET 8 | instalador · patch · ZIP |
+| **Windows 10/11 x64** | **1.6.2** | WPF · .NET 8 | instalador · patch · ZIP |
 
 > **Código-fonte privado.** Este repositório publica apenas binários e pacotes.
 > As releases Linux usam a tag `linux-vX.Y.Z` e ficam marcadas como **pre-release**,
@@ -19,14 +19,14 @@ contornar iCloud, Activation Lock ou MDM:
 | Plataforma | Release | Assets |
 |---|---|---|
 | **Linux 1.6.5** | [`linux-v1.6.5`](https://github.com/anymousdark/diagnostico-idevice/releases/tag/linux-v1.6.5) | `.deb` amd64, `.deb` arm64, AppImage x86_64, `SHA256SUMS` |
-| **Windows 1.5.9** | [`app-v1.5.9`](https://github.com/anymousdark/diagnostico-idevice/releases/tag/app-v1.5.9) | instalador, setup, ZIP, patches delta |
+| **Windows 1.6.2** | [`app-v1.6.2`](https://github.com/anymousdark/diagnostico-idevice/releases/tag/app-v1.6.2) | instalador, setup, ZIP, patches delta |
 
 ## Documentação
 
 | Documento | Ligação |
 |---|---|
 | **Linux 1.6.5** | <https://fdr-system.vercel.app/linux> |
-| **Windows 1.5.9** | <https://fdr-system.vercel.app> |
+| **Windows 1.6.2** | <https://fdr-system.vercel.app> (documento do site ainda na 1.5.9) |
 
 ---
 
@@ -131,11 +131,12 @@ desativar, `FDR_SYSTEM_LOG_UPLOAD=0`.
 
 ---
 
-## Windows 1.5.9
+## Windows 1.6.2
 
 Aplicação original **C# + WPF** para Windows 10/11 x64. Faz tudo a partir de uma única
-janela, com nove páginas, e foi desenhada para funcionar **sem internet sempre que
-possível**.
+janela, com dez páginas, e foi desenhada para funcionar **sem internet sempre que
+possível**. Inclui o **FDR Easy**, uma janela simples para quem só quer ler o iPhone e
+guardar um relatório.
 
 ### O que faz
 
@@ -145,6 +146,7 @@ possível**.
 | **Online** | Sim | Consulta o firmware assinado pela Apple, descarrega o IPSW (motor rápido, vários downloads em simultâneo, pausa/retoma) e restaura — deteta o aparelho sozinho, mesmo em recovery/DFU |
 | **Restauro** | Não | Progresso do restauro em direto (extração do IPSW + gravação no iPhone) |
 | **Reparo** | Não | Verificar modo, entrar/sair do modo recovery, reiniciar, dados em recovery/DFU e guia de DFU; painel de ativação que deteta se o aparelho está associado a uma conta iCloud (sem pedir credenciais), deteção de **gestão empresarial/MDM** (só leitura) e «Pular configuração inicial» |
+| **Ativação** | Não | Leitura do estado de ativação por USB, supervisão e sinais de MDM; IMEI, MEID, ICCID, telefone e operadora; **identificadores mascarados** por omissão; relatório TXT e registo JSON com **SHA-256**; campos de processo/NUIPC, autoridade, responsável, data e notas. Não ativa o aparelho nem contorna o Activation Lock |
 | **Diagnóstico** | Não | Registo do iOS **em direto** (começar/parar, filtrar e guardar); recolha de **crash logs e panics** para ZIP; validação ou reparação do **emparelhamento**; lista de **perfis de aprovisionamento** — tudo local e só de leitura ou com pedido explícito |
 | **Firmware** | Sim | Catálogo de **todos** os iPhones com todas as versões (assinadas e expiradas); lista os downloads em curso e os ficheiros já guardados em `Documentos\iDevice-Firmware` |
 | **Acessibilidade** | Não | Fotos e ficheiros como no 3uTools: navegar, importar/exportar, exportar todas as fotos (DCIM) e captura do ecrã do iPhone |
@@ -166,23 +168,30 @@ A janela abre **maximizada à área de trabalho** e a barra de estado fica integ
 topo. A tabela de **Firmware** usa botões compactos, com ícone e contorno, e estados em
 etiquetas verdes/vermelhas. A página **Reparo** tem scroll, para os cartões de ativação e
 MDM ficarem acessíveis. Ao desligar o iPhone, a app limpa os dados da sessão e fecha-se
-após 5 segundos por privacidade; se o iPhone voltar nesse intervalo, o fecho é cancelado.
+após 30 segundos por privacidade; se o iPhone voltar nesse intervalo, ou se ainda houver
+um iPhone ligado por USB, o fecho é cancelado.
 
 O botão **Tema**, no topo, abre o seletor com **cinco temas** — Escuro, Claro, Meia-noite,
 Floresta e Ametista — e a escolha fica guardada.
 
-### Novidades da 1.5.9
+### Novidades da 1.6.2
 
-- **Updater mais seguro:** verificação SHA-256 do executável de origem, cópia de segurança
-  `FDR_SYSTEM.exe.old`, rollback automático se a versão nova não arrancar em 15 segundos e
-  fallback para o instalador completo.
-- **Bateria mais transparente:** valor bruto e arredondado, botão **Medir 3×** com mediana
-  e limiar explícito (Boa ≥90%, Razoável ≥80%, Fraca <80%).
-- **Leitura mais rápida:** espaço, `AppleSmartBattery` e `com.apple.mobile.battery` são
-  consultados em paralelo depois da leitura principal.
-- **Logs rodados:** ficheiros com mais de 14 dias são removidos no arranque.
-- **Firmware:** o catálogo continua a ser carregado apenas quando a página Firmware é
-  aberta.
+- **FDR Easy:** janela autónoma que lê o iPhone, mostra modelo, iOS, bateria,
+  armazenamento, ativação e emparelhamento, calcula um **score de saúde de 0 a 100** e
+  apresenta uma checklist com recomendações.
+- **Relatório PDF:** duas páginas com score, dados do aparelho, checklist, recomendação,
+  campos opcionais de oficina/técnico/cliente/ordem, observações e logótipo. Os
+  identificadores saem **mascarados** por omissão e o PDF avisa que não contorna iCloud,
+  Activation Lock ou MDM.
+- **Ativação só de leitura:** estado por USB, supervisão/MDM, relatório TXT e registo JSON
+  com SHA-256. Não ativa, não remove contas e não pede credenciais.
+- **Fecho automático corrigido:** a app exige duas leituras seguidas sem dispositivo,
+  espera 30 segundos e cancela o fecho se ainda houver um iPhone ligado por USB. Deixa de
+  fechar durante o pedido **“Confiar neste computador”**.
+- **Base 1.5.9 mantida:** updater com verificação SHA-256, cópia de segurança
+  `FDR_SYSTEM.exe.old`, rollback automático em 15 segundos, bateria com valor bruto e
+  **Medir 3×**, leitura paralela, logs rodados aos 14 dias e catálogo de firmware carregado
+  só quando necessário.
 
 ### Requisitos
 
@@ -193,7 +202,7 @@ Floresta e Ametista — e a escolha fica guardada.
 
 ### Instalação
 
-1. Descarregue **`FDR_SYSTEM-1.5.9-installer.exe`** na [página de
+1. Descarregue **`FDR_SYSTEM-1.6.2-installer.exe`** na [página de
    releases](https://github.com/anymousdark/diagnostico-idevice/releases) para uma
    instalação nova ou reparação.
 2. Execute e siga o assistente (licença, pasta, Menu Iniciar, ícone no ambiente de
@@ -202,17 +211,17 @@ Floresta e Ametista — e a escolha fica guardada.
    que a aplicação criou — os firmwares que descarregou para
    `Documentos\iDevice-Firmware` ficam guardados, porque são seus.
 
-Quem já tem a **1.5.7 ou 1.5.8** pode usar o atualizador pequeno
-`FDR_SYSTEM-1.5.9-setup.exe`. Quem preferir a versão portátil pode usar o ZIP
-`FDR_SYSTEM-1.5.9-win-x64.zip` (extrair tudo e executar).
+Quem já tem a **1.5.9 ou a 1.6.1** pode usar o atualizador pequeno
+`FDR_SYSTEM-1.6.2-setup.exe` (patches de 9,2 MB e 4,3 MB). Quem preferir a versão
+portátil pode usar o ZIP `FDR_SYSTEM-1.6.2-portable.zip` (extrair tudo e executar).
 
 A aplicação verifica **automaticamente se há versões novas** ao abrir e instala a
 atualização com um clique (botão **Atualizações**, no topo) — ela fecha, instala e **volta
-a abrir sozinha**. A 1.5.9 usa um patch delta de cerca de 6 MB, verifica o SHA-256 do
-executável de origem, guarda uma cópia de segurança e repõe a versão anterior se a nova
-não arrancar em 15 segundos. Se o patch falhar, usa o instalador completo. Se o GitHub
-estiver indisponível ou limitar os pedidos, mostra um aviso em vez de dizer que já tem a
-versão mais recente.
+a abrir sozinha**. A 1.6.2 usa patches delta de 9,2 MB (a partir da 1.5.9) e 4,3 MB
+(a partir da 1.6.1), verifica o SHA-256 do executável de origem, guarda uma cópia de
+segurança e repõe a versão anterior se a nova não arrancar em 15 segundos. Se o patch
+falhar, usa o instalador completo. Se o GitHub estiver indisponível ou limitar os pedidos,
+mostra um aviso em vez de dizer que já tem a versão mais recente.
 
 ### Notas
 
