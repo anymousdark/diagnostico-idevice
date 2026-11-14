@@ -26,7 +26,7 @@ contornar iCloud, Activation Lock ou MDM:
 | Documento | Ligação |
 |---|---|
 | **Linux 1.6.5** | <https://fdr-system.vercel.app/linux> |
-| **Windows 1.6.2** | <https://fdr-system.vercel.app> (documento do site ainda na 1.5.9) |
+| **Windows 1.6.2** | <https://fdr-system.vercel.app> |
 
 ---
 
